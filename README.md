@@ -1,0 +1,2 @@
+# tictactoe_teaching_resource
+2020年開始加入臺灣師範大學資訊研究社，今年九月份預計在社課教四堂python程式設計，就開始準備這些教材，遊戲設計的流程主要參考自https://inventwithpython.com/tictactoe.py
