@@ -115,6 +115,7 @@ while turns < 9:
 	# player
 	drawBoaard(board)
 	Move(board, player_chess)
+	drawBoaard(board)
 	updateState(board)
 	if haveWinner(board):
 		print('player {}, have won the game.'.format(player_chess)); break
@@ -125,8 +126,8 @@ while turns < 9:
 	tryplace = rand(1, 9)
 	while not takeMove(board, tryplace, computer_chess):
 		tryplace = rand(1, 9)
+	drawBoaard(board)
 	updateState(board)
-	
 	if haveWinner(board):
 		print('player {}, have won the game.'.format(player_chess)); break
 	else:
