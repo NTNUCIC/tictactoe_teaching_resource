@@ -59,26 +59,26 @@ print('The ' + turn + ' will go first.')
 gameIsPlaying = True
 
 while gameIsPlaying:
-        if turn == 'X':
-            # X's turn.
+    if turn == 'X':
+        # X's turn.
+        drawBoard(theBoard)
+        getXMove(theBoard)
+        if isWinner(theBoard, turn):
             drawBoard(theBoard)
-            getXMove(theBoard)
-            if isWinner(theBoard, turn):
-                drawBoard(theBoard)
-                print('Hooray!' + turn + ' have won the game!')
-                gameIsPlaying = False
-            else:
-                turn = 'O'
-
+            print('Hooray!' + turn + ' have won the game!')
+            gameIsPlaying = False
         else:
-            # O's turn.
+            turn = 'O'
+
+    else:
+        # O's turn.
+        drawBoard(theBoard)
+        getOMove(theBoard)
+        if isWinner(theBoard, turn):
             drawBoard(theBoard)
-            getOMove(theBoard)
-            if isWinner(theBoard, turn):
-                drawBoard(theBoard)
-                print('Hooray!' + turn + ' have won the game!')
-                gameIsPlaying = False
-            else:
-                turn = 'X'
+            print('Hooray!' + turn + ' have won the game!')
+            gameIsPlaying = False
+        else:
+            turn = 'X'
 
 #試著把棋盤下滿看看，再想想要怎麼寫可以讓流程更完整

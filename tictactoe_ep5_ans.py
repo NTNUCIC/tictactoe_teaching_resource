@@ -66,34 +66,34 @@ print('The ' + turn + ' will go first.')
 gameIsPlaying = True
 
 while gameIsPlaying:
-        if turn == 'X':
-            # X's turn.
+    if turn == 'X':
+        # X's turn.
+        drawBoard(theBoard)
+        getXMove(theBoard)
+        if isWinner(theBoard, turn):
             drawBoard(theBoard)
-            getXMove(theBoard)
-            if isWinner(theBoard, turn):
-                drawBoard(theBoard)
-                print('Hooray!' + turn + ' have won the game!')
-                gameIsPlaying = False
-            else:
-                if isBoardFull(theBoard):
-                    drawBoard(theBoard)
-                    print('The game is a tie!')
-                    break
-                else:
-                    turn = 'O'
-
+            print('Hooray!' + turn + ' have won the game!')
+            gameIsPlaying = False
         else:
-            # O's turn.
-            drawBoard(theBoard)
-            getOMove(theBoard)
-            if isWinner(theBoard, turn):
+            if isBoardFull(theBoard):
                 drawBoard(theBoard)
-                print('Hooray!' + turn + ' have won the game!')
-                gameIsPlaying = False
+                print('The game is a tie!')
+                break
             else:
-                if isBoardFull(theBoard):
-                    drawBoard(theBoard)
-                    print('The game is a tie!')
-                    break
-                else:
-                    turn = 'X'
+                turn = 'O'
+
+    else:
+        # O's turn.
+        drawBoard(theBoard)
+        getOMove(theBoard)
+        if isWinner(theBoard, turn):
+            drawBoard(theBoard)
+            print('Hooray!' + turn + ' have won the game!')
+            gameIsPlaying = False
+        else:
+            if isBoardFull(theBoard):
+                drawBoard(theBoard)
+                print('The game is a tie!')
+                break
+            else:
+                turn = 'X'

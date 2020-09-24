@@ -49,16 +49,16 @@ print('The ' + turn + ' will go first.')
 gameIsPlaying = True
 
 while gameIsPlaying:
-        if turn == 'X':
-            # X's turn.
-            drawBoard(theBoard)
-            getXMove(theBoard)
+    if turn == 'X':
+        # X's turn.
+        drawBoard(theBoard)
+        getXMove(theBoard)
 
-            turn = 'O'
+        turn = 'O'
 
-        else:
-            # O's turn.
-            drawBoard(theBoard)
-            getOMove(theBoard)
+    else:
+        # O's turn.
+        drawBoard(theBoard)
+        getOMove(theBoard)
 
-            turn = 'X'
+        turn = 'X'
